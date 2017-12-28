@@ -1,0 +1,54 @@
+{
+    "name": "thecodingmachine/laravel-server-monitor-plugin-rest-api",
+    "description": "Add rest api to LAravel server monitor",
+    "keywords": [
+        "spatie",
+        "laravel-server-monitor",
+        "plugin",
+		"rest api"
+    ],
+    "homepage": "https://github.com/thecodingmachine/laravel-server-monitor-plugin-rest-api",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marc Teyssier",
+            "email": "m.teyssier@thecodingmachine.com",
+            "homepage": "https://www.thecodingmachine.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "laravel/passport": "~4.0",
+        "spatie/laravel-server-monitor": "^1.2",
+        "thecodingmachine/laravel-server-monitor-plugin-notification-by-host": "~0.2"
+    },
+    "require-dev": {
+        "mockery/mockery": "^0.9.8",
+        "orchestra/testbench": "^3.4.5",
+        "phpunit/phpunit": "^5.7",
+        "satooshi/php-coveralls": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "TheCodingMachine\\ServerMonitorPluginRetApi\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "TheCodingMachine\\ServerMonitorPluginRetApi\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "TheCodingMachine\\ServerMonitorPluginRetApi\\ServerMonitorPluginRetApiServiceProvider"
+            ]
+        }
+    }
+}
